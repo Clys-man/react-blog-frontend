@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #f2f4f8;
+}
+.form{
+
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    box-shadow: 0 1rem 1rem -0.75rem rgba(0, 0, 0, 0.125);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden; 
+    position: absolute;
+    right: 0;
+    top: 8%;
+    height: 86%;
+    margin-right: 8%;
+}
+
+@media only screen and (max-width: 576px) {
+    .form-image{
+        display: none;
+    }
+    .form{
+        top: 3%;
+        margin-left: 8%;
+        height: 94%;
+    }
+}
