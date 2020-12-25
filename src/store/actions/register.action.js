@@ -30,7 +30,7 @@ export const registerUser = (data) => {
             open: true,
             msg: 'Registrando Usuário'
         }))
-        return Http.post('/register', data)
+        return Http.post('oauth/register?clientId=YRGeJQrme2XhRdda9FnoKz22GTwEAxBRAm1kt8Kg', data)
         .then(res => {
             console.log(res)
             dispatch(changeLoading({
@@ -41,7 +41,7 @@ export const registerUser = (data) => {
                 if(res.data.error){
                     dispatch(registerError(res.data.error))
                 }
-                if(res.data.sucess){
+                if(res.data.token){
                     dispatch(changeNotify({
                         open: true,
                         msg: 'Usuário cadastrado com sucesso',

@@ -17,7 +17,7 @@ export class index extends Component {
         this.props.registerUser(this.props.data)
             .then(() => {
                 if (this.props.sucess) {
-                    window.location.replace(baseUrl + '/painel')
+                    window.location.replace(baseUrl + 'home')
                 }
             })
     }

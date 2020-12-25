@@ -1,50 +1,31 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { AppBar, Link } from '@material-ui/core'
+import React from 'react'
+import { useStyles } from '../../components/CardComponent'
+import { getUser } from '../../store/actions/auth.actions'
 
-export class index extends Component {
-    render() {
-        return (
-            <div>
-                {(window.innerWidth < 577) ?
-                    <AppBar>
+import Avatar from '@material-ui/core/Avatar';
 
-                    </AppBar>
-                    :
-                    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
-                        <Link className="navbar-brand" href="/">
-                            <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/logo_white.png" width="30" height="30" alt="logo"></img>
-                        </Link>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbar-list-4">
-                            <ul class="navbar-nav">
-                                <li class="nav-item dropdown">
-                                    <Link class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="40" height="40" class="rounded-circle"></img>
-                                    </Link>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <Link class="dropdown-item" href="#">Dashboard</Link>
-                                        <Link class="dropdown-item" href="#">Edit Profile</Link>
-                                        <Link class="dropdown-item" href="#">Log Out</Link>
-                                    </div>
-                                </li>
-                            </ul>
+export default ({ white }) => {
+    const classes = useStyles();
+    getUser()
+
+    return (
+
+        <header className="main-header">
+            <nav className={white ? 'active navbar navbar-expand-lg fixed-top navbar-light' : 'navbar navbar-expand-lg fixed-top navbar-light'}>
+                <div className="container">
+                    <a href="https://plantaoativo.com/" className="navbar-brand" rel="home" aria-current="page"><img width="182" height="66" src="https://plantaoativo.com/wp-content/uploads/2020/03/logo-pa.png" className="custom-logo" alt="Plantão Ativo" loading="lazy" /></a>            <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Exibir menu">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div className="collapse navbar-collapse" id="mainNavigation">
+                        <div className="user-info">
+                            <Avatar aria-label="recipe" className={classes.avatar}>
+                                j
+                            </Avatar>
                         </div>
-                    </nav>
-                }
-            </div>
-        )
-    }
+                    </div>
+                </div>
+            </nav>
+        </header>
+    )
 }
-
-const mapStateToProps = (state) => ({
-
-})
-
-const mapDispatchToProps = {
-
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(index)

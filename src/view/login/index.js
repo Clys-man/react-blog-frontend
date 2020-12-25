@@ -30,7 +30,7 @@ export class Login extends Component {
         const { credentials } = this.props;
         this.props.login(credentials).then(() => {
             if (this.props.sucess) {
-                window.location.replace(baseUrl + 'painel')
+                window.location.replace(baseUrl + 'home')
             }
         })
     }

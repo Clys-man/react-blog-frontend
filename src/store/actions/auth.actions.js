@@ -1,6 +1,6 @@
 import { Http } from '../../config/globalConfig'
-import {changeLoading} from './loading.action'
-import {changeNotify} from './notify.action'
+import { changeLoading } from './loading.action'
+import { changeNotify } from './notify.action'
 
 export const actionTypes = {
     GET_TOKEN: 'GET_TOKEN',
@@ -53,54 +53,64 @@ export const getUserToken = () => dispatch =>
             }
         })
 
-export const setUserToken = (token) => dispatch =>{
+export const getUser = () => dispatch => {
+    const config = {
+        headers: { Authorization: `Bearer ${getUserToken()}` }
+    };
+
+    Http.post('/api/user', config
+    ).then(console.log).catch(console.log);
+}
+
+
+export const setUserToken = (token) => dispatch => {
     localStorage.setItem('acess_token', token)
     dispatch(loading(false))
     dispatch(loginSucess(true))
 }
 
-export const login = (credentials) =>{
-    return dispatch =>{
+export const login = (credentials) => {
+    return dispatch => {
         dispatch(changeLoading({
             open: true,
             msg: 'Autenticando'
         }))
         return Http.post('oauth/token', {
             grant_type: 'password',
-            client_id:  2,
-            client_secret: 'myhX4EPCriofpU3pR0Fl5jfWdILKXhIMZumMp5FM',
+            client_id: "2",
+            client_secret: 'YRGeJQrme2XhRdda9FnoKz22GTwEAxBRAm1kt8Kg',
             username: credentials.username,
             password: credentials.password,
-        }).then(res =>{
+        }).then(res => {
             dispatch(changeLoading({
                 open: false,
                 msg: ''
             }))
-            if(typeof res !== 'undefined'){
+            if (typeof res !== 'undefined') {
                 dispatch(setUserToken(res.data.acess_token))
             }
         })
-        .catch(error =>{
-            dispatch(changeLoading({
-                open: false,
-                msg: ''
-            }))
-            if(error.response){
-                if(error.response.status === 401 || error.response.status === 400){
+            .catch(error => {
+                dispatch(changeLoading({
+                    open: false,
+                    msg: ''
+                }))
+                if (error.response) {
+                    if (error.response.status === 401 || error.response.status === 400) {
+                        dispatch(changeNotify({
+                            open: true,
+                            msg: 'E-Mail ou senha incorretos',
+                            class: 'error'
+                        }))
+                    }
+                } else {
                     dispatch(changeNotify({
                         open: true,
-                        msg: 'E-Mail ou senha incorretos',
+                        msg: 'Erro ao efetuar login',
                         class: 'error'
                     }))
                 }
-            }else{
-                dispatch(changeNotify({
-                    open: true,
-                    msg: 'Erro ao efetuar login',
-                    class: 'error'
-                }))
-            }
-        })
+            })
     }
 }
 
