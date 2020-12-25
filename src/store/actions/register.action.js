@@ -1,4 +1,4 @@
-import { Http } from '../../config/globalConfig'
+import { Http, API_KEY } from '../../config/globalConfig'
 import {changeLoading} from './loading.action'
 import {changeNotify} from './notify.action'
 import {setUserToken} from './auth.actions'
@@ -30,7 +30,7 @@ export const registerUser = (data) => {
             open: true,
             msg: 'Registrando Usuário'
         }))
-        return Http.post('oauth/register?clientId=YRGeJQrme2XhRdda9FnoKz22GTwEAxBRAm1kt8Kg', data)
+        return Http.post(`oauth/register?clientId=${API_KEY}`, data)
         .then(res => {
             dispatch(changeLoading({
                 open: false

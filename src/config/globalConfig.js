@@ -1,8 +1,7 @@
 
 import Axios from 'axios'
 
-const API_KEY = 'YRGeJQrme2XhRdda9FnoKz22GTwEAxBRAm1kt8Kg';
-
+export const API_KEY = '';
 export const rootUrl = "https://pa-desafio.herokuapp.com/"
 export const baseUrl = "http://179.199.151.197:3000/"
 

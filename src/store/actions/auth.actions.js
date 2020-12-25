@@ -1,4 +1,4 @@
-import { Http } from '../../config/globalConfig'
+import { Http, API_KEY } from '../../config/globalConfig'
 import { changeLoading } from './loading.action'
 import { changeNotify } from './notify.action'
 
@@ -77,13 +77,8 @@ export const login = (credentials) => {
         }))
         return Http.post('oauth/token', {
             grant_type: 'password',
-<<<<<<< HEAD
             client_id: "2",
-            client_secret: 'YRGeJQrme2XhRdda9FnoKz22GTwEAxBRAm1kt8Kg',
-=======
-            client_id:  2,
-            client_secret: 'qgcenMacYLBG9PEX1iQsZytb2wCkZSVGFReyIVEl',
->>>>>>> c934940cc828f624343d7c3aace6b07d5280493c
+            client_secret: API_KEY,
             username: credentials.username,
             password: credentials.password,
         }).then(res => {
