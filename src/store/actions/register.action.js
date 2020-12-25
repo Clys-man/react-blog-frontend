@@ -32,7 +32,6 @@ export const registerUser = (data) => {
         }))
         return Http.post('oauth/register?clientId=YRGeJQrme2XhRdda9FnoKz22GTwEAxBRAm1kt8Kg', data)
         .then(res => {
-            console.log(res)
             dispatch(changeLoading({
                 open: false
             }))
