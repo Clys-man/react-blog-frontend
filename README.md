@@ -15,7 +15,7 @@
 ## Projeto
 **1** - Faça o download do repositório
 ```bash
-$ git clone hhttps://github.com/Clys-man/login-page-react.git
+$ git clone hhttps://github.com/Clys-man/react-blog-frontend.git
 ```
 **2**  - Faça a instalação das depedências do projeto
 ```bash
