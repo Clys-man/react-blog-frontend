@@ -4,7 +4,7 @@
 
 | Informações |
 |:------------:|
-| Este projeto trata-se de um blog simples usado para a implementação do [Back-end](https://github.com/Clys-man/pa-desafio) desenvolvido em Laravel.  |
+| Este projeto trata-se de um blog simples usado para a implementação dos Endpoints presentes no [Back-end](https://github.com/Clys-man/pa-desafio) desenvolvido em Laravel.  |
 
 ## Instalação
 ## Pré-requesitos
