@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+<p align="center"><a href="https://plantaoativo.com/" target="_blank"><img src="https://plantaoativo.com/wp-content/uploads/2020/03/logo-pa.png"></a></p><br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Plantão Ativo Blog React</h1>
 
-## Available Scripts
+| Informações |
+|:------------:|
+| Este projeto trata-se de um blog simples usado para a implementação do [Back-end](https://github.com/Clys-man/pa-desafio) desenvolvido em Laravel.  |
 
-In the project directory, you can run:
+## Instalação
+## Pré-requesitos
 
-### `yarn start`
+[Node](https://nodejs.org/en/) >= 8.10<br>
+[npm](https://nodejs.org/en/) >= 5.6<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Projeto
+**1** - Faça o download do repositório
+```bash
+$ git clone hhttps://github.com/Clys-man/login-page-react.git
+```
+**2**  - Faça a instalação das depedências do projeto
+```bash
+$ npm install
+```
+**5**  - Faça a configuração das variáveis usadas no projeto
+```js
+export const API_KEY = "" //exemplo: 8d68a5f8daf89dsa86f8asd7f65
+export const rootUrl = "" //exemplo: https://pa-desafio.herokuapp.com/
+export const baseUrl = "" //exemplo: http://localhost:3000/
+```
+**8**  - Inicie o projeto
+```bash
+$ npm start
+```
+**9**  - Abra seu navegador e acesse: http://localhost:3000/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Back-end
 
-### `yarn test`
+> **O Back-end para integração com a aplicação está disponível em [Plantão Ativo Blog React](https://github.com/Clys-man/pa-desafio)**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Autor
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| [<img src="https://avatars0.githubusercontent.com/u/62316222?v=3&s=115" width="150"><br><sub>@Clys-man</sub>](https://github.com/Clys-man) |
+| :---: |
