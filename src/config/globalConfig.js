@@ -2,9 +2,9 @@
 import Axios from 'axios'
 import {useState} from 'react'
 
-export const API_KEY = 'YRGeJQrme2XhRdda9FnoKz22GTwEAxBRAm1kt8Kg';
-export const rootUrl = "https://pa-desafio.herokuapp.com/"
-export const baseUrl = "http://179.199.151.197:3000/"
+export const API_KEY = "";
+export const rootUrl = ""
+export const baseUrl = ""
 
 const basicFetch = async (endpoint) => {
     return (await fetch(`${rootUrl}${endpoint}`)).json();
