@@ -50,9 +50,7 @@ export default () => {
     const create = () => {
         dispatch(createPost(data)).then(() => {
             if (sucess) {
-                data.title = ''
-                data.content = ''
-                data.tags = []
+                window.location.reload()
             }
         })
     }
