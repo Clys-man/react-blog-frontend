@@ -87,7 +87,7 @@ export const login = (credentials) => {
                 msg: ''
             }))
             if (typeof res !== 'undefined') {
-                dispatch(setUserToken(res.data.acess_token))
+                dispatch(setUserToken(res.data.access_token))
             }
         })
             .catch(error => {

@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
+
 import Header from '../../components/Header'
 import Card from '../../components/CardComponent'
+import Post from '../../components/Post'
 import { getPostList } from '../../config/globalConfig'
-import CircularProgress from '../../components/CircularProgress'
-
 export default () => {
   const [postList, setPostList] = useState([]);
   const [whiteHeader, setWhiteHeader] = useState(false);
 
+
   useEffect(() => {
     const loadAll = async () => {
-      //Get Film List
       let list = await getPostList();
-      console.log(list)
       setPostList(list.data);
+
     }
     loadAll();
   }, []);
@@ -36,6 +36,7 @@ export default () => {
   return (
     <section className="landing-page">
       <Header white={whiteHeader} />
+      <Post />
       <section className="blog-list">
         <div className="container">
           <div className="row">
@@ -48,19 +49,12 @@ export default () => {
       {postList.length <= 0 &&
         <div className="container">
           <div className="row">
-            <div className="col-md-4">
-              <Card isLoading={true} />
-            </div>
-            <div className="col-md-4">
-              <Card isLoading={true} />
-            </div>
-            <div className="col-md-4">
-              <Card isLoading={true} />
-            </div>
+            <Card isLoading={true} />
+            <Card isLoading={true} />
+            <Card isLoading={true} />
           </div>
         </div>
       }
     </section>
-
   );
 }

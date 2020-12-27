@@ -5,7 +5,7 @@ import CircularProgress from './components/CircularProgress'
 
 const Login = lazy(() => import('./view/login'))
 const Register = lazy(() => import('./view/register'))
-const Home = lazy(() => import('./view/home'))
+const Home = lazy(() => import('./view/home/'))
 
 const token = localStorage.getItem('acess_token')
 const PrivateRoutes =  ({component: Component, ...rest}) =>(

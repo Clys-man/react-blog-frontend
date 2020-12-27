@@ -1,9 +1,10 @@
 
 import Axios from 'axios'
+import {useState} from 'react'
 
-export const API_KEY = "" //exemplo: 8d68a5f8daf89dsa86f8asd7f65
-export const rootUrl = "" //exemplo: https://pa-desafio.herokuapp.com/
-export const baseUrl = "" //exemplo: http://localhost:3000/
+export const API_KEY = 'YRGeJQrme2XhRdda9FnoKz22GTwEAxBRAm1kt8Kg';
+export const rootUrl = "https://pa-desafio.herokuapp.com/"
+export const baseUrl = "http://179.199.151.197:3000/"
 
 const basicFetch = async (endpoint) => {
     return (await fetch(`${rootUrl}${endpoint}`)).json();
@@ -15,5 +16,9 @@ export const Http = Axios.create({
 
 export const getPostList = () => {
     return basicFetch(`api/posts?clientId=${API_KEY}`)
+}
+
+export const getTagList = () => {
+    return basicFetch(`api/tags?clientId=${API_KEY}`)
 }
 

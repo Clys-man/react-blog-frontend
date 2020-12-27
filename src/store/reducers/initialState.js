@@ -16,6 +16,15 @@ export default {
         error: {},
         sucess: false
     },
+    home: {
+        data:{
+            title: '',
+            content: '',
+            tags: []
+        },
+        error: {},
+        sucess: false
+    },
     loading:{
         open: false,
         msg: ''
